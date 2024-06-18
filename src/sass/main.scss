@@ -1,0 +1,21 @@
+//Utils
+
+@import "./../sass/utils/mixin.scss";
+@import "./../sass/utils/typography.scss";
+
+//Components
+
+@import "./components/banner.scss";
+@import "./components/header.scss";
+@import "./components/footer.scss";
+
+//Pages
+
+@import "./pages/home.scss";
+
+//base
+
+* {
+  margin: 0;
+  padding: 0;
+}

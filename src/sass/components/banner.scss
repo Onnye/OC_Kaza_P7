@@ -1,0 +1,50 @@
+.Banner {
+  height: 223px;
+  border-radius: 25px;
+  @include center-flex;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 90%;
+  margin: 43px auto 50px;
+  max-width: 1440px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+
+  //Ajoute une superposition sombre
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+  }
+
+  p {
+    @include center-flex;
+    position: relative;
+    color: white;
+    font-family: $font-family-base;
+    font-size: 48px;
+    font-weight: 700;
+    z-index: 1;
+    margin: 0;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000; // Bordure noire autour de chaque lettre
+  }
+
+  @include respond-to("small") {
+    height: 111px;
+    justify-content: flex-start;
+
+    p {
+      padding-left: 16px;
+      width: 225px;
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+}
