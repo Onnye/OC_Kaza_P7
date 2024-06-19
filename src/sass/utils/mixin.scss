@@ -11,11 +11,11 @@
       @content;
     }
   } @else if $breakpoint == medium {
-    @media (max-width: 1001px) {
+    @media (max-width: 1024px) {
       @content;
     }
   } @else if $breakpoint == large {
-    @media (min-width: 1001px) {
+    @media (min-width: 1024px) {
       @content;
     }
   }

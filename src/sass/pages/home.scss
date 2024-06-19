@@ -1,0 +1,15 @@
+.Home {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 25px;
+  background: #f6f6f6;
+  width: 90%;
+  margin: 43px auto 50px;
+  max-width: 1440px;
+
+  @include respond-to("small") {
+    background: none;
+    width: 100%;
+  }
+}
