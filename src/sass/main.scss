@@ -8,10 +8,13 @@
 @import "./components/footer.scss";
 @import "./components/card/cardContainer.scss";
 @import "./components/card/card.scss";
+@import "./components/collapse.scss";
+@import "./components/slideshow.scss";
 
 // Pages
 @import "./pages/home.scss";
 @import "./pages/error.scss";
+@import "./pages/housing.scss";
 
 // Base styles
 * {
@@ -32,7 +35,6 @@ body {
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 .content {
