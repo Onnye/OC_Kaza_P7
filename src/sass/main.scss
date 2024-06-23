@@ -30,6 +30,8 @@ body {
 body {
   display: flex;
   flex-direction: column;
+  font-family: $font-family-base;
+  font-weight: $font-weight-normal;
 }
 
 .app-container {
