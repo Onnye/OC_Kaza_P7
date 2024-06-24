@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import arrowLeftIcon from "../../images/arrow_left.png";
 import arrowRightIcon from "../../images/arrow_right.png";
@@ -6,30 +6,21 @@ import arrowRightIcon from "../../images/arrow_right.png";
 const Slideshow = ({ images }) => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
-  const showNextSlide = useCallback(() => {
-    setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % images.length);
-  }, [images.length]);
+  const showNextSlide = () => {
+    if (currentSlideIndex < images.length - 1) {
+      setCurrentSlideIndex(currentSlideIndex + 1);
+    } else {
+      setCurrentSlideIndex(0);
+    }
+  };
 
-  const showPrevSlide = useCallback(() => {
-    setCurrentSlideIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    );
-  }, [images.length]);
-
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === "ArrowLeft") {
-        showPrevSlide();
-      } else if (event.key === "ArrowRight") {
-        showNextSlide();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [showNextSlide, showPrevSlide]);
+  const showPrevSlide = () => {
+    if (currentSlideIndex > 0) {
+      setCurrentSlideIndex(currentSlideIndex - 1);
+    } else {
+      setCurrentSlideIndex(images.length - 1);
+    }
+  };
 
   // Early return if images is empty
   if (images.length === 0) {
@@ -37,16 +28,7 @@ const Slideshow = ({ images }) => {
   }
 
   return (
-    <div
-      className="slideshow"
-      tabIndex="0"
-      onKeyDown={(event) => {
-        if (event.key === "ArrowLeft") {
-          showPrevSlide();
-        } else if (event.key === "ArrowRight") {
-          showNextSlide();
-        }
-      }}>
+    <div className="slideshow">
       {images.length > 1 && (
         <>
           <button
