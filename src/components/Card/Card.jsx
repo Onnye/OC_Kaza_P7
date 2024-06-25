@@ -10,8 +10,8 @@ const Card = ({ id, title, cover }) => {
 
   return (
     <div className="card" onClick={handleCardClick}>
-      <img src={cover} alt={title} className="card-image" />
-      <div className="card-title">{title}</div>
+      <img src={cover} alt={title} className="card__image" />
+      <div className="card__title">{title}</div>
     </div>
   );
 };

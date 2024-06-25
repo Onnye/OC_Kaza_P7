@@ -14,7 +14,7 @@
     gap: 113px;
   }
 
-  h1 {
+  &__title {
     box-sizing: border-box;
     font-size: 288px;
     font-weight: 700;
@@ -24,7 +24,7 @@
     }
   }
 
-  .error-message {
+  &__message {
     font-size: 36px;
     font-weight: 500;
 
@@ -34,7 +34,7 @@
     }
   }
 
-  .error-redirect {
+  &__redirect {
     font-size: 18px;
     font-weight: 500;
     color: #000000;

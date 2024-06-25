@@ -11,7 +11,7 @@
     margin: 20px;
   }
 
-  .logo img {
+  .header__logo img {
     height: 68px;
 
     @include respond-to(small) {
@@ -19,7 +19,7 @@
     }
   }
 
-  .navigation {
+  .header__navigation {
     ul {
       list-style: none;
       display: flex;

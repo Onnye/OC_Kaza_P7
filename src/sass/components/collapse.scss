@@ -13,7 +13,7 @@
 .collapse {
   width: 100%;
 
-  &-header {
+  &__header {
     background-color: #ff6060;
     color: white;
     padding: 10px;
@@ -29,7 +29,7 @@
     }
   }
 
-  &-icon {
+  &__icon {
     transition: transform 0.3s ease-in-out;
 
     svg {
@@ -42,12 +42,12 @@
       }
     }
 
-    &.open {
+    &--open {
       transform: rotate(-180deg); // Pointe vers le bas quand ouvert
     }
   }
 
-  &-content {
+  &__content {
     border-radius: 0 0 5px 5px;
     font-size: 18px;
     line-height: 26px;
@@ -61,7 +61,7 @@
       font-size: 16px;
     }
 
-    &.open {
+    &--open {
       opacity: 1;
       padding-top: 1em;
       background-color: #f6f6f6;

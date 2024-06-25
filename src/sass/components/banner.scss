@@ -1,4 +1,4 @@
-.Banner {
+.banner {
   height: 223px;
   border-radius: 25px;
   @include center-flex;
@@ -9,6 +9,12 @@
   margin: 0px auto 30px;
   max-width: 1440px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+
+  @include respond-to("small") {
+    height: 111px;
+    justify-content: flex-start;
+    border-radius: 10px;
+  }
 
   //Ajoute une superposition sombre
   &:before {
@@ -23,7 +29,7 @@
     z-index: 0;
   }
 
-  p {
+  &__text {
     @include center-flex;
     position: relative;
     color: white;
@@ -34,14 +40,7 @@
     margin: 0;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
       1px 1px 0 #000; // Bordure noire autour de chaque lettre
-  }
-
-  @include respond-to("small") {
-    height: 111px;
-    justify-content: flex-start;
-    border-radius: 10px;
-
-    p {
+    @include respond-to("small") {
       padding-left: 16px;
       width: 225px;
       font-size: 24px;

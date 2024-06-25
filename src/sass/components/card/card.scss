@@ -27,7 +27,7 @@
     z-index: 1;
   }
 
-  .card-image {
+  &__image {
     position: absolute;
     top: 0;
     left: 0;
@@ -38,7 +38,7 @@
     z-index: 0;
   }
 
-  .card-title {
+  &__title {
     position: relative;
     z-index: 2;
     width: 100%;
@@ -46,7 +46,7 @@
     color: white;
     font-family: $font-family-base;
     font-size: 18px;
-    font-weight: $font-weight-Largebold;
+    font-weight: $font-weight-largebold;
   }
 
   @include respond-to("small") {

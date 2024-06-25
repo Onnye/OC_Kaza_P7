@@ -7,7 +7,7 @@
   align-items: center;
   background: #000;
 
-  .logo {
+  .footer__logo {
     width: 122px;
     height: 39px;
     flex-shrink: 0;
@@ -18,7 +18,7 @@
     }
   }
 
-  .footer_text {
+  .footer__text {
     text-align: center;
     color: white;
     font-size: 24px;

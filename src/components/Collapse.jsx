@@ -28,18 +28,23 @@ const Collapse = ({ title, content }) => {
     <div className="collapse-container">
       <div className="collapse">
         <div
-          className="collapse-header"
+          className="collapse__header"
           onClick={handleToggleCollapse}
           aria-expanded={!isCollapsed}
-          role="button"
-          tabIndex={0}>
-          <div className="collapse-title">{title}</div>
-          <div className={`collapse-icon ${isCollapsed ? "" : "open"}`}>
+          role="button">
+          <div className="collapse__title">{title}</div>
+          <div
+            className={`collapse__icon ${
+              isCollapsed ? "" : "collapse__icon--open"
+            }`}>
             <FontAwesomeIcon icon={faAngleUp} />
           </div>
         </div>
-        <div className={`collapse-content ${isCollapsed ? "" : "open"}`}>
-          <div className="collapse-inner">{renderContent()}</div>
+        <div
+          className={`collapse__content ${
+            isCollapsed ? "" : "collapse__content--open"
+          }`}>
+          <div className="collapse__inner">{renderContent()}</div>
         </div>
       </div>
     </div>

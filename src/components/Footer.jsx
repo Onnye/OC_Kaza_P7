@@ -1,12 +1,12 @@
-import logo_footer from "./../images/logo_footer.png";
+import logoFooter from "./../images/logo_footer.png";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="logo">
-        <img src={logo_footer} alt="Kasa Logo" />
+      <div className="footer__logo">
+        <img src={logoFooter} alt="Kasa Logo" />
       </div>
-      <p className="footer_text">&copy; 2020 Kasa. All rights reserved</p>
+      <p className="footer__text">&copy; 2020 Kasa. All rights reserved</p>
     </footer>
   );
 };
