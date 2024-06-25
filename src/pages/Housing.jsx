@@ -5,6 +5,7 @@ import Slideshow from "../components/Housing/Slideshow";
 import Tag from "../components/Housing/Tag";
 import Host from "../components/Housing/Host";
 import Rating from "../components/Housing/Rating";
+import Collapse from "../components/Collapse";
 
 const Housing = () => {
   const { id } = useParams();
@@ -41,6 +42,10 @@ const Housing = () => {
           <Host name={housing.host.name} picture={housing.host.picture} />
           <Rating value={Number(housing.rating)} />
         </div>
+      </div>
+      <div className="description-collapse">
+        <Collapse title="Description" content={housing.description} />
+        <Collapse title="Équipements" content={housing.equipments} />
       </div>
     </div>
   );

@@ -132,4 +132,24 @@
       }
     }
   }
+
+  .description-collapse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+
+    @include respond-to(medium) {
+      flex-direction: column;
+      gap: 0px;
+    }
+
+    .collapse-container {
+      width: 100%;
+
+      .collapse__content--open {
+        min-height: 180px;
+      }
+    }
+  }
 }
