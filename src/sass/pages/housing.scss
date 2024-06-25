@@ -1,56 +1,133 @@
-.housing {
+.housing-page {
   display: flex;
   flex-direction: column;
   width: 90%;
   margin: 43px auto 50px;
   max-width: 1440px;
 
-  .housing-description {
+  &__details {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     margin: 10px 0;
 
-    .housing-info {
+    @include respond-to(small) {
+      flex-direction: column;
+    }
+  }
+
+  &__header {
+    margin-bottom: 30px;
+
+    @include respond-to(small) {
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      color: #ff6060;
+      font-size: 36px;
+      font-weight: $font-weight-bold;
+
+      @include respond-to(small) {
+        font-size: 18px;
+      }
+    }
+
+    .location {
+      font-size: 18px;
+      font-weight: $font-weight-bold;
+
+      @include respond-to(small) {
+        font-size: 14px;
+      }
+    }
+
+    .tags {
       display: flex;
-      flex-direction: row;
-      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+
+      @include respond-to(small) {
+        gap: 5px;
+      }
+
+      .tag {
+        padding: 5px 25px;
+        border-radius: 10px;
+        background: #ff6060;
+        color: white;
+        text-align: center;
+        font-size: 14px;
+        font-weight: $font-weight-largebold;
+
+        @include respond-to(small) {
+          font-size: 12px;
+          padding: 3px 15px;
+        }
+      }
+    }
+  }
+
+  &__host-rating {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+
+    @include respond-to(small) {
+      margin-top: 10px;
+      width: 100%;
+      flex-direction: row-reverse;
       justify-content: space-between;
+      align-items: center;
+    }
 
-      .housing-title-location-tag {
-        display: flex;
-        flex-direction: column;
+    .host {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 93px;
 
-        h1 {
+      &__name {
+        color: #ff6060;
+        font-size: 18px;
+        font-weight: $font-weight-bold;
+        margin-right: 10px;
+        text-align: right;
+
+        @include respond-to(small) {
+          font-size: 12px;
+          margin-right: 5px;
+        }
+      }
+
+      &__picture {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+
+        @include respond-to(small) {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+
+    .rating {
+      display: flex;
+
+      .star {
+        color: #e3e3e3;
+        margin: 0 2px;
+        font-size: 24px;
+
+        @include respond-to(small) {
+          font-size: 13px;
+        }
+
+        &--filled {
           color: #ff6060;
-          font-size: 36px;
-          font-weight: $font-weight-bold;
-          margin: 0;
-        }
-
-        .housing-location {
-          font-size: 18px;
-          font-weight: $font-weight-bold;
-
-          p {
-            margin: 0;
-          }
-        }
-
-        .tags {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 10px;
-          margin-top: 10px;
-
-          .tag {
-            padding: 5px 25px;
-            border-radius: 10px;
-            background: #ff6060;
-            color: white;
-            text-align: center;
-            font-size: 14px;
-            font-weight: $font-weight-Largebold;
-          }
         }
       }
     }
