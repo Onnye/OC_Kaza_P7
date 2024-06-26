@@ -7,46 +7,39 @@ import "../sass/components/collapse.scss";
 const Collapse = ({ title, content }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
-  const handleToggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
-  };
-
-  const renderContent = () => {
-    if (Array.isArray(content)) {
-      return (
+  const Content = () => (
+    <div
+      className={`collapse__content ${
+        isCollapsed ? "" : "collapse__content--open"
+      }`}>
+      {Array.isArray(content) ? (
         <ul>
           {content.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
-      );
-    }
-    return <p>{content}</p>;
-  };
+      ) : (
+        <p>{content}</p>
+      )}
+    </div>
+  );
 
   return (
     <div className="collapse-container">
-      <div className="collapse">
-        <div
-          className="collapse__header"
-          onClick={handleToggleCollapse}
-          aria-expanded={!isCollapsed}
-          role="button">
-          <div className="collapse__title">{title}</div>
-          <div
-            className={`collapse__icon ${
-              isCollapsed ? "" : "collapse__icon--open"
-            }`}>
-            <FontAwesomeIcon icon={faAngleUp} />
-          </div>
-        </div>
-        <div
-          className={`collapse__content ${
-            isCollapsed ? "" : "collapse__content--open"
-          }`}>
-          <div className="collapse__inner">{renderContent()}</div>
-        </div>
+      <div
+        className="collapse__header"
+        onClick={() => setIsCollapsed(!isCollapsed)}
+        aria-expanded={!isCollapsed}
+        role="button">
+        <div className="collapse__title">{title}</div>
+        <FontAwesomeIcon
+          icon={faAngleUp}
+          className={`collapse__icon ${
+            isCollapsed ? "" : "collapse__icon--open"
+          }`}
+        />
       </div>
+      <Content />
     </div>
   );
 };

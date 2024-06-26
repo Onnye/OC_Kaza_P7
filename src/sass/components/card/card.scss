@@ -9,6 +9,10 @@
   flex-basis: calc((100% - 2 * 50px) / 3);
   height: 340px;
 
+  @include respond-to("medium") {
+    flex-basis: calc((100% - 1 * 50px) / 2);
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -41,7 +45,7 @@
   &__title {
     position: relative;
     z-index: 2;
-    width: 100%;
+    width: 80%;
     padding: 10px;
     color: white;
     font-family: $font-family-base;

@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   width: 90%;
-  margin: 43px auto 50px;
+  margin: 0px auto 50px;
   max-width: 1440px;
 
   &__details {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 10px 0;
+    margin: 20px 0;
 
     @include respond-to(small) {
       flex-direction: column;
@@ -148,7 +148,11 @@
       width: 100%;
 
       .collapse__content--open {
-        min-height: 180px;
+        min-height: 200px;
+
+        @include respond-to(small) {
+          min-height: none;
+        }
       }
     }
   }
