@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import HousingData from "../data/data.json";
 import Slideshow from "../components/Housing/Slideshow";
-import Tag from "../components/Housing/Tag";
 import Host from "../components/Housing/Host";
 import Rating from "../components/Housing/Rating";
 import Collapse from "../components/Collapse";
@@ -34,7 +33,9 @@ const Housing = () => {
           <p className="location">{housing.location}</p>
           <div className="tags">
             {housing.tags.map((tag, index) => (
-              <Tag key={index} text={tag} />
+              <span key={index} className="tag">
+                {tag}
+              </span>
             ))}
           </div>
         </div>
