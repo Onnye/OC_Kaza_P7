@@ -148,10 +148,14 @@
       width: 100%;
 
       .collapse__content--open {
-        min-height: 200px;
+        min-height: 150px;
 
         @include respond-to(small) {
-          min-height: none;
+          min-height: 50px;
+        }
+
+        @include respond-to(medium) {
+          min-height: 50px;
         }
       }
     }
