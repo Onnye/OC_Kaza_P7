@@ -10,6 +10,7 @@ const Housing = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  // Utilisation du hook useEffect pour exécuter du code après le rendu
   useEffect(() => {
     const housingExists = HousingData.some(
       (accommodation) => accommodation.id === id
@@ -17,7 +18,7 @@ const Housing = () => {
     if (!housingExists) {
       navigate("/error");
     }
-  }, [id, navigate]);
+  }, [id, navigate]); // Dépendances useEffect - se déclenche quand l'ID ou navigate change
 
   const housing = HousingData.find((housing) => housing.id === id);
   if (!housing) {

@@ -22,7 +22,7 @@ const Slideshow = ({ images }) => {
     }
   };
 
-  // Early return if images is empty
+  // Condition si le tableau d'images est vide
   if (images.length === 0) {
     return <div className="slideshow">No images available</div>;
   }

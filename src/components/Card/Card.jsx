@@ -5,7 +5,7 @@ const Card = ({ id, title, cover }) => {
   const navigate = useNavigate();
 
   const handleCardClick = () => {
-    navigate(`/logement/${id}`);
+    navigate(`/logement/${id}`); // Redirection vers l'URL spécifique au logement avec l'ID correspondant
   };
 
   return (
