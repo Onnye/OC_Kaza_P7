@@ -5,7 +5,7 @@ import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import "../sass/components/collapse.scss";
 
 const Collapse = ({ title, content }) => {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(true); // État local pour gérer si le contenu est affiché ou non
 
   const Content = () => (
     <div

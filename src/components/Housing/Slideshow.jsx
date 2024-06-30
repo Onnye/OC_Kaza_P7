@@ -4,7 +4,7 @@ import arrowLeftIcon from "../../images/arrow_left.png";
 import arrowRightIcon from "../../images/arrow_right.png";
 
 const Slideshow = ({ images }) => {
-  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0); // État pour l'index de l'image courante
 
   const showNextSlide = () => {
     if (currentSlideIndex < images.length - 1) {

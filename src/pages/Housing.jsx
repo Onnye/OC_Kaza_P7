@@ -7,7 +7,7 @@ import Rating from "../components/Housing/Rating";
 import Collapse from "../components/Collapse";
 
 const Housing = () => {
-  const { id } = useParams();
+  const { id } = useParams(); // Récupère l'ID du logement depuis l'URL
   const navigate = useNavigate();
 
   // Utilisation du hook useEffect pour exécuter du code après le rendu

@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "./../images/logo.png";
 
 const Header = () => {
-  const location = useLocation();
+  const location = useLocation(); // Obtient l'objet location de la route actuelle
 
   return (
     <header className="header">
